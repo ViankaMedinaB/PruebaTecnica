@@ -1,4 +1,4 @@
-# PruebaTecnica
+# Prueba Tecnica
 
 ## Descripción del proyecto
 ## Tecnologías utilizadas
