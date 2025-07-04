@@ -20,7 +20,7 @@ public class Escenarios {
 	@Before
 	public void abrirNavegador() {
 		String projectPath = System.getProperty("user.dir");
-		System.setProperty("webdriver.chrome.driver",projectPath + "/src/test/resources/drivers/chromedriver");
+		System.setProperty("webdriver.chrome.driver", projectPath + "/src/test/resources/drivers/chromedriver");
 
 		driver = new ChromeDriver();
 
@@ -28,19 +28,18 @@ public class Escenarios {
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
 		driver.manage().window().maximize();
 	}
-	
+
 	@After
 	public void cerrarNavegador(Scenario escenario) {
 		if (escenario.isFailed()) {
 			TakesScreenshot WebDriver = null;
 			byte[] screenshot = ((TakesScreenshot) WebDriver).getScreenshotAs(OutputType.BYTES);
-		    escenario.attach(screenshot, "image/png", "name");
-		} 
-		
+			escenario.attach(screenshot, "image/png", "name");
+		}
+
 		driver.close();
 		driver.quit();
 	}
-
 
 	@And("el usuario ingresa a la pagina de inicio de sesion")
 	public void el_usuario_ingresa_a_la_pagina_de_inicio_de_sesion() throws InterruptedException {
@@ -63,8 +62,9 @@ public class Escenarios {
 	}
 
 	@Then("el usuario es redirigido al dashboard con el mensaje Welcome to the Secure Area")
-	public void el_usuario_es_redirigido_al_dashboard_con_el_mensaje_welcome_to_the_secure_area() throws InterruptedException {
-		driver.findElement(By.xpath("//*[@id=\"flash\"]")).isDisplayed();		
+	public void el_usuario_es_redirigido_al_dashboard_con_el_mensaje_welcome_to_the_secure_area()
+			throws InterruptedException {
+		driver.findElement(By.xpath("//*[@id=\"flash\"]")).isDisplayed();
 		driver.findElement(By.xpath("//a[@href='/logout']")).isDisplayed();
 		Thread.sleep(3000);
 	}
@@ -74,7 +74,6 @@ public class Escenarios {
 		driver.findElement(By.xpath("//a[@href='/logout']")).click();
 		Thread.sleep(3000);
 	}
-
 
 	// Escenario 2
 
@@ -91,14 +90,12 @@ public class Escenarios {
 		driver.findElement(By.xpath("//*[@id=\"login\"]/button/i")).isDisplayed();
 		Thread.sleep(3000);
 	}
-	
+
 	// Escenario 3
 	@When("el usuario introduce el Password")
 	public void el_usuario_introduce_el_password() throws InterruptedException {
 		driver.findElement(By.id("password")).sendKeys("SuperSecretPassword!");
 		Thread.sleep(3000);
 	}
-
-
 
 }
