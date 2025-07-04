@@ -59,7 +59,13 @@ La prueba se puede ejecutar de 3 formas distintas:
 
 - Ejecutar el comando ```mvn clean verify```. Este comando ejecuta la prueba, genera el archivo del reporte Cucumber en formato .json y luego se genera el archivo ```cucumber-report-html``` basado en el ```cucumber.json```.
 <img width="1422" alt="image" src="https://github.com/user-attachments/assets/da3bfbc4-6922-460e-b602-72dc38dd555e" />
-<img width="768" alt="image" src="https://github.com/user-attachments/assets/9cd8ae1a-f3be-4cfd-bc9c-da427b45fc9a" />
+<img width="767" alt="image" src="https://github.com/user-attachments/assets/e84970ac-49d7-4720-a477-7f153e0dda57" />
+<img width="744" alt="image" src="https://github.com/user-attachments/assets/7736a1fc-739a-4b1d-bf24-be95b697c357" />
+
+
+
+
+
 
 
 ## Generación y visualización de reportes
