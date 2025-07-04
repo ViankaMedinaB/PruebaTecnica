@@ -11,7 +11,13 @@ Automatización de pruebas para cubrir algunos escenarios de verificación y val
 - **Manejador de dependencias**: Maven
 
 ## Estructura del proyecto
-
+El proyecto posee la estructura básica de un proyecto Cucumber:
+- Archivo Runner
+- La definición de los escenarios para el archivo ```.feature```.
+- El archivo ```.feature```.
+- Hooks
+- Configuración del driver
+- Generación de los reportes
 
 ## Pasos de instalación y ejecución
 ### Pre-requisitos
